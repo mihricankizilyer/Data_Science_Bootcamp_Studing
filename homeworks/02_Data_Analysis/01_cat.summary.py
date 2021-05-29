@@ -22,7 +22,7 @@ def cat_summary(dataframe, col_name, plot = False):
         sns.countplot(x = dataframe[col_name], data = dataframe)
         plt.show()
         
-cat_summary(df, "Age", plot = True)
+cat_summary(df, "Sex", plot = True)
 
 
 # AFTER
@@ -46,4 +46,4 @@ def cat_summary(dataframe, col_name, plot = False, head = 5, cat_visualization =
             
 cat_summary(df,"Sex",plot = True)
 
-cat_summary(df, "Age", plot = True, head = 10, cat_visualization = True, unique = True )
+cat_summary(df, "Sex", plot = True, head = 10, cat_visualization = True, unique = True )
