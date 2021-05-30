@@ -13,18 +13,20 @@ import seaborn as sns
 df = pd.read_csv('datasets/csv_path/titanic.csv')
 
 
-
 # BEFORE
+
 def cat_summary(dataframe, col_name, plot = False):
     print(pd.DataFrame({col_name: dataframe[col_name].value_counts(), "Ratio": 100 * dataframe[col_name].value_counts() / len(dataframe)}))
     print("******************")
     if plot:
         sns.countplot(x = dataframe[col_name], data = dataframe)
         plt.show()
-cat_summary(df, "Age", plot = True)
+        
+cat_summary(df, "Sex", plot = True)
 
 
 # AFTER
+
 def cat_summary(dataframe, col_name, plot = False, head = 5, cat_visualization = False, unique = False):
     if cat_visualization :
         if plot:
@@ -41,5 +43,7 @@ def cat_summary(dataframe, col_name, plot = False, head = 5, cat_visualization =
             print(f"Class and frequency:{df[col_name].value_counts()}")
             print(f"Variable classes:{df[col_name].unique()}")
             print(f"Unique number of classes: {df[col_name].nunique()}")
+            
 cat_summary(df,"Sex",plot = True)
-cat_summary(df, "Age", plot = True, head = 10, cat_visualization = True, unique = True )
+
+cat_summary(df, "Sex", plot = True, head = 10, cat_visualization = True, unique = True )
