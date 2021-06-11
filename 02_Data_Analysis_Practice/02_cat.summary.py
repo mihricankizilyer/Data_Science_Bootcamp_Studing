@@ -1,5 +1,5 @@
 #############################################
-# HOMEWORK 1: Adding Features to Functions.
+#  Adding Features to Functions.
 #############################################
 
 # Task: Add attribute to cat_summary() function. Let this property be formatted with arguments.
